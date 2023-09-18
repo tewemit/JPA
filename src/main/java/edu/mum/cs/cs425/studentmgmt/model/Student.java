@@ -10,6 +10,8 @@ public class Student {
     String lastName;
     double gpa;
     String dateOfEnrollment;
+    @OneToMany
+    Classroom classroom;
 
     public Student(long studentId, String studentNumber, String firstName, String middleName, String lastName, double gpa, String dateOfEnrollment) {
         this.studentId = studentId;
@@ -75,5 +77,13 @@ public class Student {
 
     public void setDateOfEnrollment(String dateOfEnrollment) {
         this.dateOfEnrollment = dateOfEnrollment;
+    }
+
+    public Classroom getClassroom() {
+        return classroom;
+    }
+
+    public void setClassroom(Classroom classroom) {
+        this.classroom = classroom;
     }
 }
